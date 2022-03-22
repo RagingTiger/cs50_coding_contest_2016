@@ -3,7 +3,7 @@
 # make clean  # remove ALL binaries and objects
 
 # standard phony targets
-.PHONY = all clean test
+.PHONY = all clean
 
 # compiler to use
 CC = gcc
@@ -19,7 +19,7 @@ all: ${BINS}
 %: %.c
 	${CC} -Wall cs50.c $< -o $@
 
-# cleanup binaries and object files
+# cleanup binaries
 clean:
 	@echo "Cleaning up..."
-	rm -rvf ${BINS}
+	@rm -rvf ${BINS}
