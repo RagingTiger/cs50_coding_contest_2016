@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <math.h>
-#include "cs50.h"
+#include "../cs50.h"
 
 // an offer to exchange to currency of given id for a certain rate
 typedef struct offer
@@ -124,4 +124,3 @@ int main(void)
     // free graph memory
     return 0;
 }
-

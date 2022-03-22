@@ -5,7 +5,7 @@
  ***/
 
 #include <stdio.h>
-#include "cs50.h"
+#include "../cs50.h"
 
 // returns 1 if a star should be printed at the given position, else 0
 int is_star(int i, int j, int n)
@@ -39,4 +39,3 @@ int main(void)
 
     return 0;
 }
-

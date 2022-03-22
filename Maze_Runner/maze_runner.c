@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "cs50.h"
+#include "../cs50.h"
 
 #define MAX_N 1000
 #define DOWN 0
@@ -375,5 +375,3 @@ int coord(int maze_coordinate)
 {
     return 2 * maze_coordinate + 1;
 }
-
-

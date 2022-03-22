@@ -5,7 +5,7 @@
  **/
 
 #include <stdio.h>
-#include "cs50.h"
+#include "../cs50.h"
 #define MAX_MINUTES 60
 
 // returns the total waiting time for the given arrival time of the buses
@@ -78,4 +78,3 @@ int main(void)
     free(arrivals);
     return 0;
 }
-

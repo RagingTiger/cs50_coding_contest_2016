@@ -5,7 +5,7 @@
  ***/
 
 #include <stdio.h>
-#include "cs50.h"
+#include "../cs50.h"
 
 // returns 1 if the given char is among the special ones, else 0
 int is_special_char(char c)
@@ -54,4 +54,3 @@ int main(void)
     free(input);
     return 0;
 }
-

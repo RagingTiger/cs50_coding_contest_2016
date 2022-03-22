@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "cs50.h"
+#include "../cs50.h"
 
 typedef struct state
 {
@@ -476,4 +476,3 @@ void sort(int *arr, int num_elements)
     qsort(arr, num_elements, sizeof(int), compare);
     return;
 }
-

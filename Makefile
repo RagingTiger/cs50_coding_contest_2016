@@ -1,26 +1,25 @@
-wait_for_it: wait_for_it.c
-	clang -ggdb3 -O0 -std=c11 -Wall wait_for_it.c -o wait_for_it cs50.o
+# Usage:
+# make        # compile all binary
+# make clean  # remove ALL binaries and objects
 
-airport_arbitrage: airport_arbitrage.c
-	clang -ggdb3 -O0 -std=c11 airport_arbitrage.c -o airport_arbitrage cs50.o -lm
+# standard phony targets
+.PHONY = all clean test
 
-maze_runner: maze_runner.c
-	clang -ggdb3 -O0 -std=c11 maze_runner.c -o maze_runner cs50.o
+# compiler to use
+CC = gcc
 
-x: x.c
-	clang -ggdb3 -O0 -std=c11 x.c -o x cs50.o
+# variables to hold source/binary names
+SRCS := $(wildcard */*.c)
+BINS := $(SRCS:%.c=%)
 
-word_reverse: word_reverse.c
-	clang -ggdb3 -O0 -std=c11 word_reverse.c -o word_reverse cs50.o
+# default make command
+all: ${BINS}
 
-money: money.c
-	clang -ggdb3 -O0 -std=c11 money.c -o money cs50.o -lm
+# C compilation command
+%: %.c
+	${CC} -Wall cs50.c $< -o $@
 
-one_day_more: one_day_more.c
-	clang -ggdb3 -O0 -std=c11 one_day_more.c -o one_day_more cs50.o
-
-name_your_cat: name_your_cat.c
-	clang -ggdb3 -O0 -std=c11 name_your_cat.c -o name_your_cat cs50.o
-
-trading_up: trading_up.c
-	clang -ggdb3 -O0 -std=c11 trading_up.c -o trading_up cs50.o
+# cleanup binaries and object files
+clean:
+	@echo "Cleaning up..."
+	rm -rvf ${BINS}
