@@ -3,6 +3,13 @@ My solutions for cs50's coding contest on hacker rank, June 28th to August
 1st 2016. Solutions for "airport arbitrage" and "trading up" still missing a few
 test cases.
 
+# Problem Sets
+Each *problem set* has its own directory, and in each is a `README.md` file
+with both the *problem statement* and the *solutions* (i.e. the *postmortems*),
+as well as the **C source code** file implementing the solution. For running
+the *compiled programs* or building them directly on your *host OS* see the
+[Compiling](#compiling) section below.
+
 # Compiling
 Below are the *compilation options* which will be discussed in detail. While it
 is possible to use the `make` command directly on your *host OS*, you will
