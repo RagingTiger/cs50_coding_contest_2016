@@ -8,7 +8,14 @@ Below are the *compilation options* which will be discussed in detail.
 
 ## Make
 A `Makefile` is provided to *make* it easier to compile all the binaries. Below
-are the *commands* defined in the file.
+are the *commands* defined in the file. Also, depending on your `target OS`,
+you may need to pass different `compilation` and/or `linking` arguments to
+the compiler (here the default is `gcc`). This can be done using the
+`CFLAGS` and `LDFLAGS` variables as follows:
+```
+# example compilation and linking args
+make subcommand CFLAGS='-static -Wall' LDFLAGS='-lm'
+```
 
 ### All
 Simply run `make` and **all** the binaries will be compiled into their
