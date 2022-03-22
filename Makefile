@@ -19,7 +19,14 @@ all: ${BINS}
 %: %.c
 	${CC} -Wall cs50.c $< -o $@
 
+# install binaries into bin/ dir
+install: ${BINS}
+	@mkdir -p bin
+	@for binary in ${BINS}; do \
+	  mv $$binary bin && echo "Moving $$binary --> bin/$$(basename $$binary)"; \
+	done
+
 # cleanup binaries
 clean:
 	@echo "Cleaning up..."
-	@rm -rvf ${BINS}
+	@rm -rvf ${BINS} bin
