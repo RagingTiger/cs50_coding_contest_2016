@@ -8,7 +8,7 @@ Below are the *compilation options* which will be discussed in detail.
 
 ## Make
 A `Makefile` is provided to *make* it easier to compile all the binaries. Below
-are the *command* defined in the file.
+are the *commands* defined in the file.
 
 ### All
 Simply run `make` and **all** the binaries will be compiled into their
@@ -23,6 +23,15 @@ Now to run `name_your_cat` simply execute:
 ```
 ./Name_Your_Cat/name_your_cat
 ```
+
+### Install
+This subcommand allows you to build **all** the binaries but also **install**
+them into a *single directory* called `bin`:
+```
+make install
+```
+When you `ls bin/` you will see all the binary files now in one convenient
+directory.
 
 ### Clean
 To cleanup (i.e. *remove* all binaries) simply run:
