@@ -8,6 +8,9 @@
 # compiler to use
 CC = gcc
 
+# compiler flags
+CFLAGS = -Wall
+
 # variables to hold source/binary names
 SRCS := $(wildcard */*.c)
 BINS := $(SRCS:%.c=%)
@@ -17,7 +20,7 @@ all: ${BINS}
 
 # C compilation command
 %: %.c
-	${CC} -Wall cs50.c $< -o $@
+	${CC} ${CFLAGS} cs50.c $< -o $@ ${LDFLAGS}
 
 # install binaries into bin/ dir
 install: ${BINS}
