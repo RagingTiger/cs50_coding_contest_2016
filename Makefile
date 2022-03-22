@@ -3,7 +3,7 @@
 # make clean  # remove ALL binaries and objects
 
 # standard phony targets
-.PHONY = all clean
+.PHONY = all install clean
 
 # compiler to use
 CC = gcc
